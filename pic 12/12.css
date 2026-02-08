@@ -1,0 +1,175 @@
+
+ul {
+    position:fixed;
+    z-index: 1000;
+    list-style-type: none;
+    margin: 0vh;
+    width: 100vw;
+    padding: 0;
+    background-color: #fffad880;
+    display: flex; /* משנה את התצוגה של ה-ul ל-Flex */
+    justify-content: center; /* מרכז את ה-liים באופן אופקי */
+    border-bottom:  #111 solid;
+    padding: 2.5vh;
+    font-size: 1.5vw;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    direction:rtl;
+    height: 8vh;
+    
+}
+
+li {
+    text-align: center;
+    color: white;
+    z-index: 12;
+    
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    
+}
+
+li a:hover {
+    
+    border-bottom: rgb(255, 170, 42) solid 0.5vh;
+    
+}
+body{
+    background-color: rgb(129, 99, 73);
+    margin: 0;
+    padding: 0;
+    background-image: url(p9.png); 
+    background-size: auto 100%;  /* התמונה תימתח לגובה 100% מהמסך, והרוחב יישאר אוטומטי */
+    background-repeat: repeat-x; /* התמונה תחזור על עצמה בציר ה-X (רוחב) */
+    background-position: top center;  /* מיקום התמונה בחלק העליון ובמרכז */
+    height: 100vh;  /* גובה ה-body יהיה בגובה כל המסך */
+}
+#backimgchild{
+    width:auto;
+    height:100vh;
+    position: fixed;
+}
+#backimg1{
+    width:auto;
+    height:100vh;
+    position: fixed;
+}
+
+
+
+details  {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 2vh;
+    margin-top: 0.5vh;
+    
+}
+a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 8px;
+    margin-top: 5px;
+    
+}
+.in{
+    background-color: rgb(0, 0, 0);
+    margin-top: 0.1vh;
+    
+    
+}
+.in:hover {
+    color:  rgb(255, 170, 42);
+    
+}
+summary{
+    text-align:right;
+    color: white;
+    position: relative; /* כדי למקם את המשולש ביחס ל-summary */
+    
+    
+}
+summary a{
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+#sum:hover {
+    
+    border-bottom: rgb(255, 170, 42) solid 0.5vh;
+    
+}
+
+details[open] summary::after {
+    transform: translateY(-50%) rotate(180deg); /* מסובב את המשולש כלפי מטה כאשר ה-details פתוח */
+    
+}
+
+#logo{
+    position: fixed;
+    margin-top: 2vh;
+    margin-left: 1.5vw;
+    z-index:12 ;
+}
+.picture{
+    display: flex;
+    flex-wrap:wrap;
+    position: relative;
+   
+}
+
+/* סגנון למיכל השקפים */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* גובה מלא של המסך */
+    overflow: hidden; /* הסתרת חלקים לא רצויים של התמונות */
+  }
+  
+  /* מיכל התמונות (שרשרת התמונות) */
+  .slide-wrapper {
+    display: flex; /* מציב את התמונות אחת ליד השנייה */
+    transition: transform 0.5s ease-in-out; /* אפקט החלקה קצר */
+  }
+  
+  /* תמונות */
+  .mySlides {
+    width: 100vw; /* כל תמונה תופסת את רוחב המסך */
+    height: 100vh; /* כל תמונה תופסת את גובה המסך */
+    object-fit: cover; /* תוודא שהתמונה ממלאת את המסגרת */
+  }
+  
+  /* כפתורים מימין ומשמאל */
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    transform: translateY(-50%);
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  

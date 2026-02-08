@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>רות גצל צלמת ילדים ומשפחה</title>
+    <link rel="stylesheet" href="hompage.css">
+    <link rel="icon" href="pic home/pic1.png" type="image/png">
+
+</head>
+<body >
+  <div id="logo">
+    <img src="pic home/logo.png" >
+    </div>
+    <ul id="menu">
+        <li><a href="#im">בית</a></li>
+        <li><a href="#odot">אודות</a></li>
+        
+        <details><br>
+            <summary id="sum" href="#backpic">גלריה</summary>
+            <a class="in" href="pic child/child.html">חלאקה</a>
+            <a class="in" href="pic family/family.html">משפחתי</a>
+            <a class="in" href="pic newborn/newborn.html">ניו בורן</a>
+            <a class="in" href="pic 12/12.html">בת מצווה</a>
+            <a class="in" href="pic 1/1.html">גיל שנה</a>
+            <a class="in" href="pic Albom/albom.html">אלבומים</a>
+        </details>
+        <li><a href="#custitle">לקוחות מרוצים</a></li>
+        <li><a href="#price">מחירון</a></li>
+        <li><a href="#tab">יצירת קשר</a></li>
+        </ul>
+        <!-- כפתור המבורגר -->
+<div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+<script>
+  function toggleMenu() {
+  var menu = document.getElementById("menu");  // שים לב שה-ID הוא 'menu'
+  menu.classList.toggle("open"); // הוספת או הסרת הקלאס 'open' מהתפריט
+}
+</script>
+
+             <div id="im" class="image-slide" style="background-image: url('image1.jpg');"></div>
+            <div class="image-slide" style="background-image: url('image2.jpg');"></div>
+            <div class="image-slide" style="background-image: url('image3.jpg');"></div>
+        
+           
+        
+        
+        <div class="divpic"> 
+             <img src="pic home/pic1.png" class="pic">
+            <img src="pic home/pic2.png" class="pic">
+            <img src="pic home/pic3.png" class="pic">
+            <img src="pic home/pic4.png" class="pic">
+            <img src="pic home/pic5.png" class="pic">
+            <img src="pic home/pic6.png" class="pic">
+            <p id="name">רות גצל </p><br>
+            <p id="name1"> צלמת ילדים משפחה ועוד...</p>
+        </div>
+           <div id="odot"> 
+            <img id="odotpic" src="pic home/odot.jpg" alt="odot">
+           </div>
+          
+           
+               <!-- התמונה קופצת 👇-->
+               <div id="popup" class="popup">
+                   <div class="popup-content">
+                       <span id="close" class="close">&times;</span>
+                       <img src="pic home/pop.png" alt="תמונה קופצת" />
+                   </div>
+               </div>
+               <script>
+                window.onload = function() {
+                setTimeout(function() {
+               document.getElementById('popup').style.display = 'flex';
+               }, 7000); 
+               }
+ 
+               // סגירת התמונה בלחיצה על איקס
+               document.getElementById('close').onclick = function() {
+              document.getElementById('popup').style.display = 'none';
+              }
+              </script>
+ 
+           
+               <script src="script.js" ></script>
+               <div class="backpic" id="backpic">
+                <div class="pic-container" >
+                  <img src="pic child/p7.png" alt="son" class="outpic">
+                  <div class="cover"  ><a  href="pic child/child.html"><div class="text">צפו</div></div></a>
+                  <p class="write" >חלאקה</p>
+                </div>
+                <div class="pic-container">
+                  <img src="pic family/p.png" alt="family" class="outpic">
+                  <div class="cover"><a  href="pic family/family.html"><div class="text">צפו</div></div></a>
+                  <p class="write">משפחתי </p>
+                </div>
+                
+                <div class="pic-container">
+                  <img src="pic 12/p7.png" alt="new-born" class="outpic">
+                  <div class="cover"><a  href="pic 12/12.html"><div class="text">צפו</div></div></a>
+                  <p class="write">בת-מצווה</p>
+                </div>
+                
+                <div class="pic-container">
+                  <img src="pic 1/p7.png" alt="one year" class="outpic">
+                  <div class="cover"><a  href="pic 1/1.html"><div class="text">צפו</div></div></a>
+                  <p class="write">גיל שנה</p>
+                </div>
+                <div class="pic-container">
+                  <img src="pic newborn/p13.jpg" alt="12 old" class="outpic">
+                  <div class="cover"><a  href="pic newborn/newborn.html"><div class="text">צפו</div></div></a>
+                  <p class="write">ניו-בורן</p>
+                </div>
+                <div class="pic-container">
+                  <img src="pic Albom/p.png" alt="Albomim" class="outpic">
+                  <div class="cover"><a  href="pic Albom/albom.html"><div class="text">צפו</div></div></a>
+                  <p class="write">אלבומים</p>
+                </div>
+              </div>
+              <div id="price">
+                <img id="pricepic" src="pic home/price1.png" alt="price">
+              </div>
+
+
+             <img id="custitle" src="pic home/cust.png" src="המלצות">
+              <div id="backslide">
+               
+              <div class="container1">
+                <div class="slider">
+                    <div class="slide"><b>נתת הרבה מעבר לערך כספי.<br>
+                      האנושיותת,השלווה,<br>הרצון העז שיצא הכי <br>מושלם שיכול להיות<br>
+                      ,הזריזות,<br>הגמישות,השמחה,והרוגע,<br>המקוריות,היחידיות והזרימה...</b></div>
+                    <div class="slide"><b>ואווו ואווו ואואוווווווואת מטורפתת!!! פשוט הלם! איזה תמונותאמהלההה</b></div>
+                    <div class="slide"><b>WOW WOW WOW
+                      !!!מדהים מדהים!  היה שווה לחכות...הילדים נהנו לראות את התמונותולהזכר בחוויות...</b></div>
+                    <div class="slide"><b>
+                      רות מהממת!!! 
+                      קודם כל את מקסימה ומיוחדת!! 
+                      היית סבלנית ונעימה לפני ולאורך כל הצילומים...
+                      נהננו איתך ובעיקר אבישי נדלק עליך מהרגע הראשון...
+                      </b></div>
+                    <div class="slide"><b>מושלםםםםםםםםםםםם!!!! לא יכול להיות יותר יפה מזה ממש אוהבת!!!!!!!!!!!!!</b></div>
+                    <div class="slide"><b>ואוו רות את אלופה!
+                       כל תמונה יותר יפה מהשניה! מטורף!
+                      לא דמיינתי שזה יהיה כל כך מושלם!עריכה ממש יפה! 
+                      פוזות מושלמות! עיזבי שהיית כזאת סבלנית עם נתנאל ואיתנו...
+                      כל הכבוד לך! </b></div>
+                    <div class="slide"><b>הי רות מה שלומך?
+                      קיבלנו המון הון פרגונים טובים על התמונות.
+                      ואפילו כבר כמה ביקשו את הטלפון..
+                      כמובן שהמלצנו בחום!!! </b></div>
+                    <div class="slide"> <b>תודה רבה על הכל!<br>
+                      🤩🤩 וחכי לפניות מאיתנו
+                    </b></div>
+                    <div class="slide"> <b> אנחנו נהננו מאד מאד מאד! <br>
+                      נפגש שוב בקרוב בעז"ה
+                    </b></div>
+                    <div class="slide"><b>נתת הרבה מעבר לערך כספי.<br>
+                      האנושיותת,השלווה,<br>הרצון העז שיצא הכי <br>מושלם שיכול להיות<br>
+                      ,הזריזות,<br>הגמישות,השמחה,והרוגע,<br>המקוריות,היחידיות והזרימה...</b></div>
+                    <div class="slide"><b>ואווו ואווו ואואוווווווואת מטורפתת!!! פשוט הלם! איזה תמונותאמהלההה</b></div>
+                    <div class="slide"><b>WOW WOW WOW
+                      !!!מדהים מדהים!  היה שווה לחכות...הילדים נהנו לראות את התמונותולהזכר בחוויות...</b></div>
+                    <div class="slide"><b>
+                      רות מהממת!!! 
+                      קודם כל את מקסימה ומיוחדת!! 
+                      היית סבלנית ונעימה לפני ולאורך כל הצילומים...
+                      נהננו איתך ובעיקר אבישי נדלק עליך מהרגע הראשון...
+                      </b></div>
+                    <div class="slide"><b>מושלםםםםםםםםםםםם!!!! לא יכול להיות יותר יפה מזה ממש אוהבת!!!!!!!!!!!!!</b></div>
+                    <div class="slide"><b>ואוו רות את אלופה!
+                       כל תמונה יותר יפה מהשניה! מטורף!
+                      לא דמיינתי שזה יהיה כל כך מושלם!עריכה ממש יפה! 
+                      פוזות מושלמות! עיזבי שהיית כזאת סבלנית עם נתנאל ואיתנו...
+                      כל הכבוד לך! </b></div>
+                    <div class="slide"><b>הי רות מה שלומך?
+                      קיבלנו המון הון פרגונים טובים על התמונות.
+                      ואפילו כבר כמה ביקשו את הטלפון..
+                      כמובן שהמלצנו בחום!!! </b></div>
+                    <div class="slide"> <b>תודה רבה על הכל!<br>
+                      🤩🤩 וחכי לפניות מאיתנו
+                    </b></div>
+                    <div class="slide"> <b> אנחנו נהננו מאד מאד מאד! <br>
+                      נפגש שוב בקרוב בעז"ה
+                    </b></div>
+                    <div class="slide"><b>נתת הרבה מעבר לערך כספי.<br>
+                      האנושיותת,השלווה,<br>הרצון העז שיצא הכי <br>מושלם שיכול להיות<br>
+                      ,הזריזות,<br>הגמישות,השמחה,והרוגע,<br>המקוריות,היחידיות והזרימה...</b></div>
+                    <div class="slide"><b>ואווו ואווו ואואוווווווואת מטורפתת!!! פשוט הלם! איזה תמונותאמהלההה</b></div>
+                    <div class="slide"><b>WOW WOW WOW
+                      !!!מדהים מדהים!  היה שווה לחכות...הילדים נהנו לראות את התמונותולהזכר בחוויות...</b></div>
+                    <div class="slide"><b>
+                      רות מהממת!!! 
+                      קודם כל את מקסימה ומיוחדת!! 
+                      היית סבלנית ונעימה לפני ולאורך כל הצילומים...
+                      נהננו איתך ובעיקר אבישי נדלק עליך מהרגע הראשון...
+                      </b></div>
+                    <div class="slide"><b>מושלםםםםםםםםםםםם!!!! לא יכול להיות יותר יפה מזה ממש אוהבת!!!!!!!!!!!!!</b></div>
+                    <div class="slide"><b>ואוו רות את אלופה!
+                       כל תמונה יותר יפה מהשניה! מטורף!
+                      לא דמיינתי שזה יהיה כל כך מושלם!עריכה ממש יפה! 
+                      פוזות מושלמות! עיזבי שהיית כזאת סבלנית עם נתנאל ואיתנו...
+                      כל הכבוד לך! </b></div>
+                    <div class="slide"><b>הי רות מה שלומך?
+                      קיבלנו המון הון פרגונים טובים על התמונות.
+                      ואפילו כבר כמה ביקשו את הטלפון..
+                      כמובן שהמלצנו בחום!!! </b></div>
+                    <div class="slide"> <b>תודה רבה על הכל!<br>
+                      🤩🤩 וחכי לפניות מאיתנו
+                    </b></div>
+                    <div class="slide"> <b> אנחנו נהננו מאד מאד מאד! <br>
+                      נפגש שוב בקרוב בעז"ה
+                    </b></div>
+                    <div class="slide"><b>נתת הרבה מעבר לערך כספי.<br>
+                      האנושיותת,השלווה,<br>הרצון העז שיצא הכי <br>מושלם שיכול להיות<br>
+                      ,הזריזות,<br>הגמישות,השמחה,והרוגע,<br>המקוריות,היחידיות והזרימה...</b></div>
+                    <div class="slide"><b>ואווו ואווו ואואוווווווואת מטורפתת!!! פשוט הלם! איזה תמונותאמהלההה</b></div>
+                    <div class="slide"><b>WOW WOW WOW
+                      !!!מדהים מדהים!  היה שווה לחכות...הילדים נהנו לראות את התמונותולהזכר בחוויות...</b></div>
+                    <div class="slide"><b>
+                      רות מהממת!!! 
+                      קודם כל את מקסימה ומיוחדת!! 
+                      היית סבלנית ונעימה לפני ולאורך כל הצילומים...
+                      נהננו איתך ובעיקר אבישי נדלק עליך מהרגע הראשון...
+                      </b></div>
+                    <div class="slide"><b>מושלםםםםםםםםםםםם!!!! לא יכול להיות יותר יפה מזה ממש אוהבת!!!!!!!!!!!!!</b></div>
+                    <div class="slide"><b>ואוו רות את אלופה!
+                       כל תמונה יותר יפה מהשניה! מטורף!
+                      לא דמיינתי שזה יהיה כל כך מושלם!עריכה ממש יפה! 
+                      פוזות מושלמות! עיזבי שהיית כזאת סבלנית עם נתנאל ואיתנו...
+                      כל הכבוד לך! </b></div>
+                    <div class="slide"><b>הי רות מה שלומך?
+                      קיבלנו המון הון פרגונים טובים על התמונות.
+                      ואפילו כבר כמה ביקשו את הטלפון..
+                      כמובן שהמלצנו בחום!!! </b></div>
+                    <div class="slide"> <b>תודה רבה על הכל!<br>
+                      🤩🤩 וחכי לפניות מאיתנו
+                    </b></div>
+                    <div class="slide"> <b> אנחנו נהננו מאד מאד מאד! <br>
+                      נפגש שוב בקרוב בעז"ה
+                    </b></div>
+                    
+                </div>
+            </div>
+            </div>
+            <script src="script.js"></script>
+           <script>
+       let index = 0;  // אינדקס של השקף הנוכחי
+const slides = document.querySelectorAll('.slide');  // כל השקפים
+const slider = document.querySelector('.slider');  // הקונטיינר של השקפים
+
+// פונקציה להעביר את השקף
+function moveToNextSlide() {
+  // הסר את הקלאס active מכל הדיבים
+  slides.forEach(slide => slide.classList.remove('active'));
+
+  // חושב את הדיב הימני ביותר הבא
+  index = (index + 1) % slides.length;  // אם הגענו לסוף, נחזור להתחלה
+
+  // הוסף את הקלאס active לדיב הימני ביותר החדש
+  slides[index].classList.add('active');
+
+  // הזז את הסליידר
+  slider.style.transform = `translateX(-${index * 33.3333}%)`;
+}
+
+// לדוגמה, נבצע את המעבר כל 3 שניות
+setInterval(moveToNextSlide, 3000);
+
+           </script>
+
+
+
+              <img id="contact" src="pic home/contact.png" alt="contact">
+              <table id="tab">
+             <td>
+             <form id="form" action="#logo">
+              
+              <label for="fname"></label>
+              <input type="text" id="fname" name="fname" class="input" placeholder="שם" required><br>
+              <label for="Phone"></label>
+              <input type="text" id="phone" name="phone" class="input" placeholder="טלפון" required><br>
+              <label for="name"></label>
+              <input type="email" id="eimail" name="email" class="input" placeholder="אימייל" required><br>
+              <input type="number" id="albom" name="albom" min="1" max="3" class="input" ><br>
+              <label for="albom"> סוג חבילה:1- בסיסית 2-מעודפת 3- מושלמת </label><br>
+              <label for="name"> </label>
+              <input type="text" id="other" name="other" class="input" placeholder="הודעה"><br>
+              </td>
+              
+              <td>
+              <label for="type" id="typecha">סוג חבילה:</label><br>
+              <label for="type" class="kind">   חלאקה</label>
+              <input type="radio" id="type1" name="type" class="input" ><br>
+              <label for="type" class="kind">בת-מצווה</label>
+              <input type="radio" id="type2" name="type" class="input" ><br>
+              <label for="type" class="kind">   משפחתי</label>
+              <input type="radio" id="type3" name="type" class="input" ><br>
+              <label for="type" class="kind">ניו-בורן</label>
+              <input type="radio" id="type4" name="type" class="input" ><br>
+              <label for="type" class="kind"> גיל שנה </label>
+              <input type="radio" id="type5" name="type" class="input"><br><br><br><br><br>
+            
+              <label for="time" id="time"> קביעת יום צילומים: </label><br>
+              <input type="date" id="time" name="time"><br><br><br>
+              <tr>
+                <td colspan="2">
+                  
+
+                  <input type="submit" id="submit" onclick="alert('הטופס נשלח בהצלחה! &#128512')"  value="שליחה "  >
+
+                </td>
+              </tr>
+              
+              </td>
+              
+            </form>
+          </table>
+        
+      
+          <script>// מחירון
+            const image = document.querySelector('#pricepic');
+            let hasAnimated = false; // משתנה שמוודא שהאנימציה תקרה רק פעם אחת
+    
+            // יצירת observer שמגיב כאשר התמונה נכנסת לטווח התצוגה
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !hasAnimated) {
+                        // אם התמונה נכנסת למסך והאנימציה לא הופעלה בעבר
+                        entry.target.style.animation = 'slideInFromLeftTop 1s ease-out forwards'; // מפעילים את האנימציה
+                        hasAnimated = true; // מעדכנים את המשתנה כך שהאנימציה לא תתבצע שוב
+                    } else if (!entry.isIntersecting) {
+                        // אם התמונה יוצאת מהמסך, אז מאפשרים לה לבצע את האנימציה בפעם הבאה שהיא נכנסת
+                        hasAnimated = false;
+                    }
+                });
+            }, {
+                threshold: 0.5  // האנימציה תתחיל כאשר 50% מהתמונה יכנסו למסך
+            });
+    
+            // מתחילים לעקוב אחרי התמונה
+            observer.observe(image);
+        </script>
+
+        <footer> 
+          <br>
+          <table >
+            <tr>
+            <td colspan="2"><h2 >אודות רות גצל </h2></td>
+           </tr>
+          <tr>
+            
+            <td><p>התמונות שלי ושלכם הם כמובן תמונות שמספרות...</p></td>
+             <td>טלפון:0534143912</td>
+          </tr>
+            <td ><p>שנותנות לנו להרגיש עד כמה החיים יפים</p></td>
+            <td>מייל:0583264049z@gmail.com</td>
+          </tr>
+        </table>
+
+        </footer>
+   
+
+        
+</body>
+</html>

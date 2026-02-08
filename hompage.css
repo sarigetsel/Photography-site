@@ -1,0 +1,730 @@
+* {
+  scroll-behavior: smooth;
+}
+
+ul {
+    position:fixed;
+    z-index: 1000;
+    list-style-type: none;
+    margin: 0vh;
+    width: 100vw;
+    padding: 0;
+    background-color: #fffad880;
+    display: flex; /* משנה את התצוגה של ה-ul ל-Flex */
+    justify-content: center; /* מרכז את ה-liים באופן אופקי */
+    border-bottom:  #111 solid;
+    padding: 2.5vh;
+    font-size: 1.5vw;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    direction:rtl;
+    height: 8vh;
+}
+@media only screen and (max-width: 900px) {
+  /* For desktop: */
+  ul {font-size: 15px;}
+  
+} 
+
+li {
+    text-align: center;
+    color: white;
+    z-index: 12;
+    
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    
+}
+
+li a:hover {
+    
+    border-bottom: rgb(255, 170, 42) solid 0.5vh;
+    
+}
+
+/* כפתור המבורגר */
+.hamburger {
+  display: none; /* כפתור המבורגר מוסתר כברירת מחדל */
+  font-size: 2rem;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1100;
+}
+/* כאשר המסך קטן מ-768px */
+@media screen and (max-width: 768px) {
+  ul {
+      position: fixed;
+      flex-direction: column; 
+      justify-content: center; 
+      align-items: center; 
+      right: 0; 
+      height: 100vh;
+      width: 15vw; 
+      display: none;
+      font-size: 2rem; 
+  }
+#sum{
+  color: black;
+  font-size: 1.2rem;
+}
+.in{
+  
+  font-size: 1.2rem;
+}
+  .hamburger {
+      display: block; 
+  }
+
+  /* סגנון התפריט כשהוא פתוח */
+  ul.open {
+      display: flex; /* מציג את התפריט כשיש את הקלאס 'open' */
+  }
+
+  li {
+      width: 80%; 
+      text-align: center; 
+      padding: 15px 0; 
+  }
+
+  li a {
+      font-size: 1.2rem; 
+      text-decoration: none; 
+      color: black; 
+      display: block; 
+  }
+
+  li a:hover {
+      border-bottom: 2px solid #FFA500; 
+  }
+}
+
+body{
+    background-color: rgb(129, 99, 73);
+    margin: 0;
+    padding: 0;
+    
+    
+}
+details  {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 2vh;
+    margin-top: 0.5vh;
+    
+}
+a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 8px;
+    margin-top: 5px;
+    
+}
+.in{
+    background-color: rgb(0, 0, 0);
+    margin-top: 0.1vh;
+    
+    
+}
+.in:hover {
+    color:  rgb(255, 170, 42);
+    
+}
+summary{
+    text-align:right;
+    color: white;
+    position: relative; /* כדי למקם את המשולש ביחס ל-summary */
+    
+    
+}
+summary a{
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+#sum:hover {
+    
+    border-bottom: rgb(255, 170, 42) solid 0.5vh;
+    
+}
+
+details[open] summary::after {
+    transform: translateY(-50%) rotate(180deg); /* מסובב את המשולש כלפי מטה כאשר ה-details פתוח */
+    
+}
+
+
+.divpic {
+  width: 100vw;       
+  height: 100vh;      
+  overflow: hidden;    /* תמונה מחוץ למסך לא תוצג */
+  position: relative;  
+  z-index: -1;        
+  pointer-events: none; /* לא יפריעו לאינטראקציה עם תוכן אחר */
+  border-bottom: 0.2vh solid #000000;
+}
+
+
+@media (max-width: 768px) {
+  .divpic {
+      width: 100vw;   
+      height: 100vh; 
+  }
+
+  
+  .divpic img {
+      width: 100%;          
+      height: 100%;        
+      object-fit: cover;    /* התמונה תתמלא בגובה ותחתך אם צריך */
+      object-position: center; /* התמקדות במרכז התמונה */
+  }
+}
+
+
+.pic {
+    width: 100vw;
+    height: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0; /* כל התמונה מתחילה שקופה */
+    animation: fadeInOut 36s infinite; /* תנועה אחידה לכל התמונות */
+    
+}
+
+/* אנימציה של שקיפות (פייד) */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 1; /* תמונה נראית */
+    }
+    35% {
+        opacity: 0; /* התחלה של דהייה */
+    }
+    100% {
+        opacity: 0; /* דהייה מוחלטת */
+    }
+}
+
+/* התמונות מקבלות עיכוב אחיד */
+.divpic .pic:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.divpic .pic:nth-child(2) {
+    animation-delay: 4s; 
+}
+
+.divpic .pic:nth-child(3) {
+    animation-delay: 10s; 
+}
+
+.divpic .pic:nth-child(4) {
+    animation-delay: 15s; 
+}
+
+.divpic .pic:nth-child(5) {
+    animation-delay: 20s; 
+}
+
+.divpic .pic:nth-child(6) {
+    animation-delay: 25s; 
+}
+
+
+#hi {
+    padding: 20px;
+    background-color: #00000055;
+    z-index: 0; 
+    margin-top: 0vh; 
+    min-height: 500px;
+    text-align: center;
+    border-top: #000000 solid;
+}
+#name {
+  font-size: 2.5vw;
+  direction: rtl;
+  margin-top: 76vh; 
+  position: absolute; 
+  right: 0;
+  font-weight: 20vw;
+  animation-name: n;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  font-family: 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: rgb(130, 105, 83);
+  width: 11vw;
+  color: #fff8e7;
+  opacity: 0; 
+}
+
+#name1 {
+  font-size: 2.3vw;
+  direction: rtl;
+  margin-top: 76vh; 
+  position: absolute; 
+  right: 0;
+  font-weight: 20vw;
+  animation-name: n1; 
+  animation-duration: 3s;
+  animation-delay: 1.5s;  
+  animation-fill-mode: forwards;
+  font-family: 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #000000;
+  width: 25vw;
+  color: #fff8e7;
+  opacity: 0; 
+}
+/*לאותיות בדף הבית*/
+@keyframes n {
+  0% {
+      right: 0px;
+      top: 0px; /* מתחיל מהפינה השמאלית העליונה */
+      opacity: 0; /* בהתחלה שקוף */
+  }
+  25% {
+      right: 11vw;
+      top: 0px; /* נשאר באותו המקום בהתחלה */
+      opacity: 1; /* נהיה גלוי */
+  }
+  100% {
+      right: 11vw;
+      top: 0px; /* נשאר במיקום זה אחרי האנימציה */
+      opacity: 1; /* נשאר גלוי */
+  }
+}
+
+/* אנימציה נפרדת עבור #name1 שגורמת לו לרדת מתחת */
+@keyframes n1 {
+  0% {
+      right: 0px;
+      top: 0px; /* מתחיל מאותו מקום כמו #name */
+      opacity: 0; /* בהתחלה שקוף */
+  }
+  25% {
+      right: 11vw;
+      top: 3.5vw; /* תזוזה למטה ב-3.5vw, כך שהוא יופיע מתחת ל-#name */
+      opacity: 1; /* נהיה גלוי */
+  }
+  100% {
+      right: 11vw;
+      top: 3.5vw; /* נשאר במיקום זה אחרי האנימציה */
+      opacity: 1; /* נשאר גלוי */
+  }
+}
+@media only screen and (max-width: 780px) {
+  #name{margin-top: 80vh;
+    font-size: 4vw;
+    width: 14vw;
+    
+  } 
+  #name1{
+    margin-top: 80vh;
+    font-size: 4vw;
+    width: 43vw;
+  }
+
+}
+
+    #logo{
+      
+      position: fixed;
+      margin-top: 1vh;
+      margin-left: 1.5vw;
+    }
+   #odot{
+    height: 100vh;
+    width: 100vw;
+    direction: rtl;
+    background-color: rgba(129, 99, 73, 0.701);
+    margin-top: 0;
+    margin-bottom: 350px;
+    padding: 0;
+   }
+   @media only screen and (max-width: 1500px) {
+    /* For desktop: */
+    #odot {margin-bottom: 1px;}
+    #odotpic{height: 100vh;
+   object-fit: cover;
+    width: auto;
+    margin: auto;
+
+  }
+
+  } 
+
+   #odotpic{
+    width: 100vw;
+    margin-top: 0;
+    padding: 0;
+    bottom: 0;
+   }
+ 
+   footer{
+    background-color: #000000;
+    color: white;
+    width: 100vw;
+    height: 30vh;
+    direction: rtl;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align:center;
+    bottom: 0;
+   }
+   
+
+   @media only screen and (max-width: 1250px) {
+    /* For desktop: */
+    footer {height: 75vh;}
+  } 
+   table{
+    text-align: center;
+    margin: auto;
+    width: 40vw;
+    
+   }/*חלון קופץ*/
+.popup {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* תוכן חלון קופץ*/
+.popup-content {
+    position: relative;
+    background-color: white;
+    padding: 2px;
+    border-radius: 1px;
+    text-align: center;
+}
+
+/* כפתור איקס של החלון הקופץ*/
+.close {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: red;
+}
+
+/* תמונה קופצת*/
+.popup img {
+    max-height: 75vh;
+    max-width:auto;
+}
+@media only screen and (max-width: 500px) {
+  /* For desktop: */
+  .popup img {height: 50vh;
+    width: auto;
+    
+  }
+}
+.backpic {
+    display: flex;
+    flex-wrap: wrap;
+  justify-content: center;
+    background-color: #fff8e7ab;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 10vh;
+  }
+
+  @media only screen and (max-width: 750px) {
+    /* For desktop: */
+    .backpic {height: 50vh;
+      
+    }
+  }
+  @media (max-width: 768px) {
+    .image {
+      width: calc(50% - 10px); /* כל תמונה תתפוס חצי מהשורה */
+    }
+  }
+
+  
+  .pic-container {
+    position: relative;
+    margin: 1%;
+    display: inline-block;
+    width: 19vw; 
+    width: calc(24% - 10px); /* 3 תמונות בשורה, 10px ריווח בין כל תמונה */
+    box-sizing: border-box;
+  }
+  
+  .outpic {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease; 
+    border-radius: 15%;
+    direction: rtl;
+    
+  }
+  .cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 243, 226, 0.651); /* צבע לבן עם שקיפות */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; 
+    transition: opacity 0.3s ease; /* האנימציה שתהפוך את הדיב לגלוי */
+    border-radius: 11%;
+    
+  }
+  
+  .pic-container:hover .cover {
+    opacity: 1; /* הופך את הדיב לגלוי כשמעבירים את העכבר */
+  }
+  
+  .pic-container:hover .outpic {
+    
+    opacity: 150%; /* הופך את התמונה לשקופה בעת מעבר העכבר */
+  }
+  
+  .text {
+    font-size: 24px;
+    font-weight: bold;
+    color: black; 
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+  }
+  .write{
+    text-align: center;
+   margin-top: 0;
+    padding-top: 5%;
+    padding-top: 4vh;
+    
+  }
+  .input{
+    border-top:none;
+    border-left: none;
+    border-right: none;
+   border-bottom: 3.5px solid rgb(194, 104, 104);
+   width: 30vw;
+   height: 1vh;
+   margin-top: 4vh;
+   border-radius: 5px 5px 5px 5px; 
+   padding: 3%;
+   font-size:1.5vw;
+   color: #00000066;
+  }
+  #form{
+    direction:rtl;
+    padding: 10vh;
+    
+  }
+  #albom{
+    color: #000000;
+  }
+  #time{ /*תאריך*/
+    color: rgb(194, 104, 104);
+    font-size: 1.5vw;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    margin: auto;
+    margin-top: 0;
+  }
+.kind{
+    color: rgb(255, 238, 246);
+    font-size: 20px;
+    
+  }
+  #tab{
+    direction: rtl;
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    direction: rtl;
+    padding-right: 0;
+  }
+  td{
+    width: 60vw;
+    
+  }
+  #typecha{
+    margin: auto;
+    text-align: center;
+    color: #000000;
+    font-size: 1.5vw;
+    direction: rtl;
+    color: rgb(194, 104, 104); 
+  }
+ 
+  input[type="radio"] {
+    width: 2vw;  
+    height: 2vh;
+    border-radius: 50%; 
+    accent-color: rgb(0, 0, 0); 
+    cursor: pointer; 
+}
+#submit{
+   width: 10vw;
+   background-color: rgb(194, 104, 104);
+   color: rgb(0, 0, 0);
+   border-radius: 5px 5px 5px 5px;
+   height: 7vh;
+   width: 17vw;
+   font-size: 120%;
+   margin-bottom: 10vh;
+   border: none;
+}
+
+  #submit:hover {
+      background-color: white;
+      color: rgb(194, 104, 104);
+  }
+      @media only screen and (max-width: 760px) {
+        /* For desktop: */
+        #submit {font-size: 13px;
+          
+        }
+      } 
+  
+#other{
+    height: 10vh;
+}
+#contact{
+  margin: auto;
+  width: 23vw;
+  margin-left:38vw;
+  margin-top:15vh ;
+  
+}
+@media only screen and (max-width: 760px) {
+  /* For desktop: */
+  #contact {width: 30vw;
+    margin-left: 35vw;
+  }
+}
+#price{
+width: 100vw;
+height:auto;
+background-color:#fffaf4;
+margin-top: 0;
+padding: 0;
+
+}
+#pricepic{
+width: 100vw;
+height:a;
+padding: 0;
+
+}
+@keyframes slideInFromLeftTop {
+  from {
+      transform: translate( -100vw); /* מתחילה מחוץ למסך מצד שמאל למעלה */
+      opacity: 0; /* התמונה שקופה */
+  }
+  to {
+      transform: translate(0); /* מגיעה למקום שלה */
+      opacity: 1;
+  }
+}
+
+/* מחירון */
+#pricepic {
+  opacity: 0; 
+  transition: opacity 1s ease-in-out; /* גורם לתמונה להראות בצורה חלקה */
+}
+#price {
+  text-align: center;
+}
+
+.container1 {
+  width: 80%;
+  overflow: hidden;
+  position: relative;
+  padding: 2px;
+  margin: 2px auto;
+}
+
+.slider {
+  display: flex;
+  transition: transform 1s ease;
+  padding: 2px;
+  margin: 15px;
+  margin: auto;
+}
+
+.slide {
+  padding: 1vw;
+  min-width: 28.5%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:  rgb(255, 228, 228);
+  direction: rtl;
+  text-align: center;
+  border-radius: 5% ;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  transition: transform 0.5s, flex-grow 0.3s;
+  margin: 15px;
+  order: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.3);
+
+}
+@media only screen and (max-width: 780px) {
+  /* For desktop: */
+  .slide {font-size: 2vw;}
+}
+.slide:nth-child(0) {
+  order: 0;  /* תמונה שנייה תמיד במרכז */
+}
+.slide.active {
+  flex-grow: 1.5;
+  height: 250px;
+  margin:auto;
+}
+#backslide{
+  margin-top: 30vh;
+ margin-bottom: 20vh;
+ 
+}
+.slider {
+  gap: 10px;
+}
+#custitle{
+margin: auto;
+width: 23vw;
+margin-left:38vw;
+margin-top:15vh ;
+
+}
+@media only screen and (max-width: 760px) {
+  /* For desktop: */
+  #custitle {width: 30vw;
+    margin-left: 35vw;
+  }
+}
